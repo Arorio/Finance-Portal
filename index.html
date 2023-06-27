@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Responsive Admin Dashboard Template">
+  <meta name="keywords" content="admin,dashboard">
+  <meta name="author" content="stacks">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <!-- The above 6 meta tags *must* come first in the head;any other head content must come *after* these tags --><!-- Title -->
+  <title>财务门户</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700,800&display=swap" rel="stylesheet">
+  <link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/plugins/font-awesome/css/all.min.css" rel="stylesheet">
+  <link href="/assets/plugins/perfectscroll/perfect-scrollbar.css" rel="stylesheet">
+  <link href="/assets/plugins/apexcharts/apexcharts.css" rel="stylesheet">
+  <link href="/assets/plugins/fullcalendar/main.min.css" rel="stylesheet">
+  <!-- Theme Styles -->
+  <link href="/assets/css/main.min.css" rel="stylesheet">
+  <link href="/assets/css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="page-content" style="margin-top: 5px; margin-left: 5px">
+    <div class="main-wrapper">
+      <div class="row">
+        <div class="col-12 col-xl-12 stretch-card">
+          <div class="row flex-grow">
+            <div class="col-md-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-baseline">
+                    <h6 class="card-title mb-0" style="padding-left: 4px;">实际收款</h6>
+                    <div class="dropdown mb-2">
+                      <button class="btn p-0" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="eye"
+                            class="icon-sm mr-2"></i> <span class="">View</span></a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="edit-2"
+                            class="icon-sm mr-2"></i> <span class="">Edit</span></a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="trash"
+                            class="icon-sm mr-2"></i> <span class="">Delete</span></a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="printer"
+                            class="icon-sm mr-2"></i> <span class="">Print</span></a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="download"
+                            class="icon-sm mr-2"></i> <span class="">Download</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 col-md-12 col-xl-7" style="display: inline;">
+                      <h3 class="mb-2 flex">580
+                        <span class="d-flex align-items-baseline"
+                          style="font-size: 14px; line-height: 33px;margin-left: 8px;">
+                          万元
+                        </span>
+                      </h3>
+                      <div class="d-flex align-items-baseline">
+                        计划 500 万元 &nbsp; 有效 430 万元 <br /> 开票 400 万元
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-12 col-xl-5">
+                      <div id="apexChart1" class="mt-md-3 mt-xl-0"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-baseline">
+                    <h6 class="card-title mb-0" style="padding-left: 4px;">收入达成率</h6>
+                    <div class="dropdown mb-2">
+                      <button class="btn p-0" type="button" id="dropdownMenuButton2" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="eye"
+                            class="icon-sm mr-2"></i>
+                          <span class="">View</span></a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="edit-2"
+                            class="icon-sm mr-2"></i> <span class="">Edit</span></a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="trash"
+                            class="icon-sm mr-2"></i> <span class="">Delete</span></a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="printer"
+                            class="icon-sm mr-2"></i> <span class="">Print</span></a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="download"
+                            class="icon-sm mr-2"></i> <span class="">Download</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 col-md-12 col-xl-6">
+                      <h3 class="mb-2 flex">120
+                        <span class="d-flex align-items-baseline"
+                          style="font-size: 14px; line-height: 33px;margin-left: 8px;">
+                          %
+                        </span>
+                      </h3>
+                      <div class="d-flex align-items-baseline">
+                        回款达成率 92 % <br /> 预算达成率 89%
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-12 col-xl-6">
+                      <div id="apexChart2" class="mt-md-3 mt-xl-0"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-baseline">
+                    <h6 class="card-title mb-0" style="padding-left: 4px;">实际付款</h6>
+                    <div class="dropdown mb-2">
+                      <button class="btn p-0" type="button" id="dropdownMenuButton1" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="eye"
+                            class="icon-sm mr-2"></i> <span class="">View</span></a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="edit-2"
+                            class="icon-sm mr-2"></i> <span class="">Edit</span></a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="trash"
+                            class="icon-sm mr-2"></i> <span class="">Delete</span></a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="printer"
+                            class="icon-sm mr-2"></i> <span class="">Print</span></a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="download"
+                            class="icon-sm mr-2"></i> <span class="">Download</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 col-md-12 col-xl-5">
+                      <h3 class="mb-2 flex">288
+                        <span class="d-flex align-items-baseline"
+                          style="font-size: 14px; line-height: 33px;margin-left: 8px;">
+                          万元
+                        </span>
+                      </h3>
+                      <div class="d-flex align-items-baseline">
+                        应付账款 136 万元 <br /> 收到发票 216 万元
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-12 col-xl-7">
+                      <div id="apexChart3" class="mt-md-3 mt-xl-0"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-baseline">
+                    <h6 class="card-title mb-0" style="padding-left: 4px;">已缴印花税</h6>
+                    <div class="dropdown mb-2">
+                      <button class="btn p-0" type="button" id="dropdownMenuButton2" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="eye"
+                            class="icon-sm mr-2"></i>
+                          <span class="">View</span></a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="edit-2"
+                            class="icon-sm mr-2"></i> <span class="">Edit</span></a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="trash"
+                            class="icon-sm mr-2"></i> <span class="">Delete</span></a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="printer"
+                            class="icon-sm mr-2"></i> <span class="">Print</span></a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i data-feather="download"
+                            class="icon-sm mr-2"></i> <span class="">Download</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 col-md-12 col-xl-5">
+                      <h3 class="mb-2 flex">1.28
+                        <span class="d-flex align-items-baseline"
+                          style="font-size: 14px; line-height: 33px;margin-left: 8px;">
+                          万元
+                        </span>
+                      </h3>
+                      <div class="d-flex align-items-baseline" style="margin-bottom: 22px">
+                        待缴纳 0.66 万元
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-12 col-xl-7">
+                      <div id="apexChart4" class="mt-md-3 mt-xl-0"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- row -->
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-xl-3">
+          <div class="card stat-widget" style="height: 93.5vh;">
+            <div class="card-body">
+              <h5 class="card-title">我的待办</h5>
+              <img src="/todo.png" alt="" style="width: 95%;">
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="card" style="height: 30vh;">
+            <div class="card-body">
+              <h5 class="card-title">财务风险</h5>
+              <div class="transactions-list" style="display: flex; gap: 4.5vw;">
+                <div class="tr-item col-xl-3">
+                  <div class="tr-company-name">
+                    <div class="tr-icon tr-card-icon tr-card-bg-danger text-danger"><i data-feather="alert-circle"></i>
+                    </div>
+                    <div class="tr-text" style="width: 6vw;">
+                      <h4>收款逾期</h4>
+                    </div>
+                  </div>
+                  <div class="tr-rate flex">
+                    <p>
+                    <h5 style="margin-right: 8px;">240</h5>
+                    万
+                    <span class="text-danger" style="margin-left: 10px; width: 45px;">+24 ↑</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="tr-item col-xl-3">
+                  <div class="tr-company-name">
+                    <div class="tr-icon tr-card-icon tr-card-bg-danger text-danger"><i data-feather="alert-octagon"></i>
+                    </div>
+                    <div class="tr-text" style="width: 6vw;">
+                      <h4>项目逾期</h4>
+                    </div>
+                  </div>
+                  <div class="tr-rate flex">
+                    <p>
+                    <h5 style="margin-right: 8px;">18</h5>
+                    个
+                    <span class="text-success" style="margin-left: 10px; width: 45px;">-2 ↓</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="tr-item col-xl-3">
+                  <div class="tr-company-name">
+                    <div class="tr-icon tr-card-icon tr-card-bg-danger text-danger"><i data-feather="dollar-sign"></i>
+                    </div>
+                    <div class="tr-text" style="width: 6vw;">
+                      <h4>开票未收款</h4>
+                    </div>
+                  </div>
+                  <div class="tr-rate flex">
+                    <p>
+                    <h5 style="margin-right: 8px;">18</h5>
+                    个
+                    <span class="text-success" style="margin-left: 10px; width: 45px;">-2 ↓</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="transactions-list" style="display: flex; gap: 4.5vw;">
+                <div class="tr-item col-xl-3">
+                  <div class="tr-company-name">
+                    <div class="tr-icon tr-card-icon tr-card-bg-danger text-danger"><i data-feather="x-circle"></i>
+                    </div>
+                    <div class="tr-text" style="width: 6vw;">
+                      <h4>采购超额</h4>
+                    </div>
+                  </div>
+                  <div class="tr-rate flex">
+                    <p>
+                    <h5 style="margin-right: 8px; width: 2.2vw;">137</h5>
+                    万
+                    <span class="text-danger" style="margin-left: 10px; width: 45px;">+40 ↑</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="tr-item col-xl-3">
+                  <div class="tr-company-name">
+                    <div class="tr-icon tr-card-icon tr-card-bg-danger text-danger"><i data-feather="minimize-2"></i>
+                    </div>
+                    <div class="tr-text" style="width: 6vw;">
+                      <h4>关联交易</h4>
+                    </div>
+                  </div>
+                  <div class="tr-rate flex">
+                    <p>
+                    <h5 style="margin-right: 8px;">18</h5>
+                    个
+                    <span class="text-primary" style="margin-left: 10px; width: 45px;">持平</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="tr-item col-xl-3">
+                  <div class="tr-company-name">
+                    <div class="tr-icon tr-card-icon tr-card-bg-danger text-danger"><i data-feather="file-minus"></i>
+                    </div>
+                    <div class="tr-text" style="width: 6vw;">
+                      <h4>付款未收票</h4>
+                    </div>
+                  </div>
+                  <div class="tr-rate flex">
+                    <p>
+                    <h5 style="margin-right: 8px;">18</h5>
+                    个
+                    <span class="text-success" style="margin-left: 10px; width: 45px;">-2 ↓</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="height: 60vh;">
+            <div class="card-body">
+              <h5 class="card-title">合同付款和收款</h5>
+              <div id="apex3"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3">
+          <div class="card stat-widget" style="height: 30vh;">
+            <div class="card-body">
+              <h5 class="card-title">快捷发起</h5>
+              <div class="transactions-list inline-flex">
+                <div class="tr-item shortcut">
+                  <a href="#">
+                    <div class="tr-company-name">
+                      <div class="tr-icon tr-card-icon tr-card-bg-primary">
+                        <i data-feather="anchor"></i>
+                      </div>
+                      <div class="tr-text">
+                        <h4 style="color: rgb(91, 91, 91)">对账</h4>
+                        <!-- <p>模板库描述</p> -->
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="tr-item shortcut">
+                  <a href="#">
+                    <div class="tr-company-name">
+                      <div class="tr-icon tr-card-icon tr-card-bg-primary">
+                        <i data-feather="anchor"></i>
+                      </div>
+                      <div class="tr-text">
+                        <h4 style="color: rgb(91, 91, 91)">付款</h4>
+                        <!-- <p>模板库描述</p> -->
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="tr-item shortcut">
+                  <a href="#">
+                    <div class="tr-company-name">
+                      <div class="tr-icon tr-card-icon tr-card-bg-primary">
+                        <i data-feather="anchor"></i>
+                      </div>
+                      <div class="tr-text">
+                        <h4 style="color: rgb(91, 91, 91)">收款</h4>
+                        <!-- <p>模板库描述</p> -->
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="transactions-list inline-flex">
+                <div class="tr-item shortcut">
+                  <a href="#">
+                    <div class="tr-company-name">
+                      <div class="tr-icon tr-card-icon tr-card-bg-primary">
+                        <i data-feather="anchor"></i>
+                      </div>
+                      <div class="tr-text">
+                        <h4 style="color: rgb(91, 91, 91)">核销</h4>
+                        <!-- <p>模板库描述</p> -->
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="tr-item shortcut">
+                  <a href="#">
+                    <div class="tr-company-name">
+                      <div class="tr-icon tr-card-icon tr-card-bg-primary">
+                        <i data-feather="anchor"></i>
+                      </div>
+                      <div class="tr-text">
+                        <h4 style="color: rgb(91, 91, 91)">开票</h4>
+                        <!-- <p>模板库描述</p> -->
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="tr-item shortcut">
+                  <a href="#">
+                    <div class="tr-company-name">
+                      <div class="tr-icon tr-card-icon tr-card-bg-primary">
+                        <i data-feather="anchor"></i>
+                      </div>
+                      <div class="tr-text">
+                        <h4 style="color: rgb(91, 91, 91)">印花税</h4>
+                        <!-- <p>模板库描述</p> -->
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card stat-widget" style="height: 60vh;">
+            <div class="card-body">
+              <h5 class="card-title">大额资金占用合同</h5>
+              <div id="apex4"></div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- <div class="col-sm-6 col-xl-4">
+          <div class="card stat-widget">
+            <div class="card-body">
+              <h5 class="card-title">Social Media</h5>
+              <div class="transactions-list">
+                <div class="tr-item">
+                  <div class="tr-company-name">
+                    <div class="tr-icon tr-card-icon tr-card-bg-danger text-danger"><i data-feather="thumbs-up"></i></div>
+                    <div class="tr-text">
+                      <h4>New post reached 7k+likes</h4>
+                      <p>02 March</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="transactions-list">
+                <div class="tr-item">
+                  <div class="tr-company-name">
+                    <div class="tr-icon tr-card-icon tr-card-bg-info text-info"><i data-feather="twitch"></i></div>
+                    <div class="tr-text">
+                      <h4>Developer AMA is now live</h4>
+                      <p>01 March</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="transactions-list">
+                <div class="tr-item">
+                  <div class="tr-company-name">
+                    <div class="tr-icon tr-card-icon tr-card-bg-danger text-danger"><i data-feather="instagram"></i></div>
+                    <div class="tr-text">
+                      <h4>52 unread messages</h4>
+                      <p>23 February</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="transactions-list">
+                <div class="tr-item">
+                  <div class="tr-company-name">
+                    <div class="tr-icon tr-card-icon tr-card-bg-warning text-warning"><i data-feather="shopping-bag"></i></div>
+                    <div class="tr-text">
+                      <h4>2 new orders from shop page</h4>
+                      <p>17 February</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="transactions-list">
+                <div class="tr-item">
+                  <div class="tr-company-name">
+                    <div class="tr-icon tr-card-icon tr-card-bg-info text-info"><i data-feather="twitter"></i></div>
+                    <div class="tr-text">
+                      <h4>Hashtag #circl is trending</h4>
+                      <p>03 February</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <!-- <div class="row">
+        <div class="col-md-12 col-lg-8 col-xl-12">
+          <div class="card table-widget" style="height: 500px;">
+            <div class="card-body">
+              <h5 class="card-title">纠纷诉讼</h5>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">序号</th>
+                      <th scope="col">诉讼主体</th>
+                      <th scope="col">案件编号</th>
+                      <th scope="col">经办人</th>
+                      <th scope="col">涉案金额</th>
+                      <th scope="col">诉讼情况</th>
+                      <th scope="col">状态</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>1</th>
+                      <td>甲公司</td>
+                      <td>2023-01-002</td>
+                      <td>章三</td>
+                      <td>李四律师，北京市某律所</td>
+                      <td>起诉乙公司侵犯商标权</td>
+                      <td><span class="badge bg-success">上报待处理</span></td>
+                    </tr>
+                    <tr>
+                      <th>2</th>
+                      <td>丙公司</td>
+                      <td>2023-02-002</td>
+                      <td>章四</td>
+                      <td>赵六律师，上海市某律所</td>
+                      <td>被起诉违反合同义务</td>
+                      <td><span class="badge bg-danger">诉讼一审</span></td>
+                    </tr>
+                    <tr>
+                      <th>3</th>
+                      <td>丁公司</td>
+                      <td>2023-02-003</td>
+                      <td>章七</td>
+                      <td>孙十律师，苏州市某律所</td>
+                      <td>起诉戊公司侵犯专利权</td>
+                      <td><span class="badge bg-success">确认律师</span></td>
+                    </tr>
+                    <tr>
+                      <th>4</th>
+                      <td>己公司</td>
+                      <td>2023-04-004</td>
+                      <td>章十一</td>
+                      <td>孙十律师，苏州市某律所</td>
+                      <td>被起诉侵犯著作权</td>
+                      <td><span class="badge bg-primary">调解</span></td>
+                    </tr>
+                    <tr>
+                      <th>5</th>
+                      <td>庚公司</td>
+                      <td>2023-05-005</td>
+                      <td>章十一</td>
+                      <td>张十一律师，天津市某律所</td>
+                      <td>起诉辛公司不履行仲裁裁决</td>
+                      <td><span class="badge bg-danger">诉讼二审</span></td>
+                    </tr>
+                    <tr>
+                      <th>6</th>
+                      <td>癸公司</td>
+                      <td>2023-07-007</td>
+                      <td>章十一</td>
+                      <td>周十六律师，南京市某律所</td>
+                      <td>起诉甲乙合伙企业合伙纠纷</td>
+                      <td><span class="badge bg-success">结案</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-lg-8 col-xl-6">
+          <div class="card table-widget" style="height: 536px;">
+            <div class="card-body">
+              <h5 class="card-title">律师查询</h5>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col" style="width: 150px;">名称</th>
+                      <th scope="col">编号</th>
+                      <th scope="col">律所</th>
+                      <th scope="col">资质</th>
+                      <th scope="col">擅长领域</th>
+                      <th scope="col" style="width: 120px;">服务次数</th>
+                      <th scope="col" style="width: 120px;">服务评价</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row"><img src="../../assets/images/avatars/profile-image.png" alt="">章三</th>
+                      <td>110101</td>
+                      <td>北京市某律所</td>
+                      <td><span class="badge bg-info">高级</span></td>
+                      <td>民商事、刑事、行政诉讼</td>
+                      <td>10</td>
+                      <td><span class="badge bg-info">良好</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><img src="../../assets/images/avatars/profile-image.png" alt="">李四</th>
+                      <td>310102</td>
+                      <td>上海市某律所</td>
+                      <td><span class="badge bg-info">中级</span></td>
+                      <td>知识产权、劳动争议、合同纠纷</td>
+                      <td>8</td>
+                      <td><span class="badge bg-success">一般</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><img src="../../assets/images/avatars/profile-image.png" alt="">李四</th>
+                      <td>44003</td>
+                      <td>广州市某律所</td>
+                      <td><span class="badge bg-danger">初级</span></td>
+                      <td>婚姻家庭、继承遗产、保险理赔</td>
+                      <td>6</td>
+                      <td><span class="badge bg-danger">较差</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><img src="../../assets/images/avatars/profile-image.png" alt="">赵六</th>
+                      <td>510105</td>
+                      <td>成都市某律所</td>
+                      <td><span class="badge bg-primary">中级</span></td>
+                      <td>房地产、建筑工程、物业管理</td>
+                      <td>4</td>
+                      <td><span class="badge bg-primary">良好</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><img src="../../assets/images/avatars/profile-image.png" alt="">周九</th>
+                      <td>500107</td>
+                      <td>重庆市某律所</td>
+                      <td><span class="badge bg-success">高级</span></td>
+                      <td>国际贸易、海事海商、涉外仲裁诉讼</td>
+                      <td>11</td>
+                      <td><span class="badge bg-success">优秀</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-8 col-xl-6">
+          <div class="card table-widget" style="height: 536px;">
+            <div class="card-body">
+              <h5 class="card-title">合同模板</h5>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">名称</th>
+                      <th scope="col">所属部门</th>
+                      <th scope="col">来源</th>
+                      <th scope="col">失效日期</th>
+                      <th scope="col">状态</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row"><img src="../../assets/file.svg" alt="" style="width: 20px;">采购类合同模板</td>
+                      <td>A部门</td>
+                      <td>本地上传</td>
+                      <td>2023.12.31</td>
+                      <td><span class="badge bg-success">启用</span></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><img src="../../assets/file.svg" alt="" style="width: 20px;">销售类合同模板</td>
+                      <td>B部门</td>
+                      <td>在线生成</td>
+                      <td>2023.10.31</td>
+                      <td><span class="badge bg-success">启用</span></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><img src="../../assets/file.svg" alt="" style="width: 20px;">租赁合同模板</td>
+                      <td>C部门</td>
+                      <td>在线生成</td>
+                      <td>2023.10.31</td>
+                      <td><span class="badge bg-success">启用</span></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><img src="../../assets/file.svg" alt="" style="width: 20px;">服务合同模板</td>
+                      <td>D部门</td>
+                      <td>在线生成</td>
+                      <td>2022.9.31</td>
+                      <td><span class="badge bg-danger">停用</span></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><img src="../../assets/file.svg" alt="" style="width: 20px;">软件许可合同模板</td>
+                      <td>E部门</td>
+                      <td>在线生成</td>
+                      <td>2022.9.31</td>
+                      <td><span class="badge bg-danger">停用</span></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><img src="../../assets/file.svg" alt="" style="width: 20px;">咨询类合同模板</td>
+                      <td>F部门</td>
+                      <td>本地上传</td>
+                      <td>2024.9.31</td>
+                      <td><span class="badge bg-success">启用</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-lg-8 col-xl-6">
+          <div class="card table-widget" style="height: 570px">
+            <div class="card-body">
+              <h5 class="card-title">风险识别</h5>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">编号</th>
+                      <th scope="col" style="width: 105px;">规则</th>
+                      <th scope="col" style="width: 105px;">规则组</th>
+                      <th scope="col" style="width: 200px;">合同</th>
+                      <th scope="col">阶段</th>
+                      <th scope="col">类别</th>
+                      <th scope="col">说明</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>#53327</td>
+                      <td>字符串</td>
+                      <td>组1</td>
+                      <td>维森集团采购合同</td>
+                      <td><span class="badge bg-primary">起草</span></td>
+                      <td><span class="badge bg-info">资信变动</span></td>
+                      <td>合同资信变动风险</td>
+                    </tr>
+                    <tr>
+                      <td>#13328</td>
+                      <td>清单</td>
+                      <td>组2</td>
+                      <td>维森集团销售合同</td>
+                      <td><span class="badge bg-primary">起草</span></td>
+                      <td><span class="badge bg-success">管理风险</span></td>
+                      <td>合同审核不到位</td>
+                    </tr>
+                    <tr>
+                      <td>#35313</td>
+                      <td>字符串</td>
+                      <td>组3</td>
+                      <td>维森集团采购合同</td>
+                      <td><span class="badge bg-success">履约</span></td>
+                      <td><span class="badge bg-danger">业务风险</span></td>
+                      <td>未能按时交付</td>
+                    </tr>
+                    <tr>
+                      <td>#73423</td>
+                      <td>清单</td>
+                      <td>组4</td>
+                      <td>维森集团销售合同</td>
+                      <td><span class="badge bg-success">履约</span></td>
+                      <td><span class="badge bg-primary">财务风险</span></td>
+                      <td>合同金额超额度付款</td>
+                    </tr>
+                    <tr>
+                      <td>#54773</td>
+                      <td>字符串</td>
+                      <td>组5</td>
+                      <td>维森集团采购合同</td>
+                      <td><span class="badge bg-success">履约</span></td>
+                      <td><span class="badge bg-success">管理风险</span></td>
+                      <td>倒签;关联交易</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-8 col-xl-6">
+          <div class="card table-widget" style="height: 570px">
+            <div class="card-body">
+              <h5 class="card-title">合规审查</h5>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">编号</th>
+                      <th scope="col">名称</th>
+                      <th scope="col">内容</th>
+                      <th scope="col">状态</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>审查高风险岗位</td>
+                      <td>公司新来了一个财务总监，需要做背调</td>
+                      <td><span class="badge bg-success">已审查</span></td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>审查特级供应商</td>
+                      <td>A集团</td>
+                      <td><span class="badge bg-primary">待审查</span></td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>审查特级供应商</td>
+                      <td>B集团</td>
+                      <td><span class="badge bg-primary">待审查</span></td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>审查重大合同</td>
+                      <td>C集团</td>
+                      <td><span class="badge bg-primary">待审查</span></td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>招投标</td>
+                      <td>E集团</td>
+                      <td><span class="badge bg-primary">待审查</span></td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>审查特级供应商</td>
+                      <td>D集团</td>
+                      <td><span class="badge bg-primary">待审查</span></td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>审查特级供应商</td>
+                      <td>F集团</td>
+                      <td><span class="badge bg-primary">待审查</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div class="row">
+        <div class="col-md-12 col-lg-4">
+          <div class="card"><img src="../../assets/images/card-bg.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="card-meet-header">
+                <div class="card-meet-day">
+                  <h6>WED</h6>
+                  <h3>7</h3>
+                </div>
+                <div class="card-meet-text">
+                  <h6>Developer AMA</h6>
+                  <p>Meet project developers</p>
+                </div>
+              </div>
+              <p class="card-text m-b-md">Lorem ipsum dolor sit amet,consectetur adipiscing elit</p>
+              <a href="#" class="btn btn-info">Join</a><a href="#" class="btn btn-primary">Invite</a></div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <div class="card stat-widget">
+            <div class="card-body">
+              <h5 class="card-title">我的待办</h5>
+              <div class="transactions-list">
+                <div class="tr-item">
+                  <div class="tr-company-name">
+                    <div class="tr-icon tr-card-icon tr-card-bg-danger text-danger"><i data-feather="thumbs-up"></i></div>
+                    <div class="tr-text">
+                      <h4>Facebook</h4>
+                      <p>02 March</p>
+                    </div>
+                  </div>
+                  <div class="tr-rate">
+                    <p><span class="text-success">+$24</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="transactions-list">
+                <div class="tr-item">
+                  <div class="tr-company-name">
+                    <div class="tr-icon tr-card-icon tr-card-bg-success text-success"><i data-feather="credit-card"></i></div>
+                    <div class="tr-text">
+                      <h4>Visa</h4>
+                      <p>02 March</p>
+                    </div>
+                  </div>
+                  <div class="tr-rate">
+                    <p><span class="text-success">+$300</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="transactions-list">
+                <div class="tr-item">
+                  <div class="tr-company-name">
+                    <div class="tr-icon tr-card-icon tr-card-bg-danger text-danger"><i data-feather="tv"></i></div>
+                    <div class="tr-text">
+                      <h4>Netflix</h4>
+                      <p>02 March</p>
+                    </div>
+                  </div>
+                  <div class="tr-rate">
+                    <p><span class="text-danger">- $17</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="transactions-list">
+                <div class="tr-item">
+                  <div class="tr-company-name">
+                    <div class="tr-icon tr-card-icon tr-card-bg-warning text-warning"><i data-feather="shopping-cart"></i></div>
+                    <div class="tr-text">
+                      <h4>Themeforest</h4>
+                      <p>02 March</p>
+                    </div>
+                  </div>
+                  <div class="tr-rate">
+                    <p><span class="text-danger">- $220</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="transactions-list">
+                <div class="tr-item">
+                  <div class="tr-company-name">
+                    <div class="tr-icon tr-card-icon tr-card-bg-info text-info"><i data-feather="dollar-sign"></i></div>
+                    <div class="tr-text">
+                      <h4>PayPal</h4>
+                      <p>02 March</p>
+                    </div>
+                  </div>
+                  <div class="tr-rate">
+                    <p><span class="text-success">+20%</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-xl-9">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Revenue</h5>
+              <div id="apex1"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-4">
+          <div class="card stat-widget">
+            <div class="card-body">
+              <h5 class="card-title">Orders</h5>
+              <div id="apex2"></div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  </div>
+  <!-- Javascripts -->
+  <script src="../../assets/plugins/jquery/jquery-3.4.1.min.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="../../assets/plugins/perfectscroll/perfect-scrollbar.min.js"></script>
+  <script src="../../assets/plugins/apexcharts/apexcharts.min.js"></script>
+  <script src="../../assets/js/main.min.js"></script>
+  <script src="../../assets/js/pages/dashboard.js"></script>
+  <script src="../../assets/js/dashboard.js"></script>
+
+  <!-- Javascripts Calendar-->
+  <script src="/assets/plugins/jquery/jquery-3.4.1.min.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="/assets/plugins/perfectscroll/perfect-scrollbar.min.js"></script>
+  <script src="/assets/plugins/fullcalendar/main.min.js"></script>
+  <script src="/assets/js/main.min.js"></script>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        events: 'https://fullcalendar.io/demo-events.json?overload-day'
+      });
+      calendar.render()
+    });
+
+    var options3 = {
+      series: [
+        {
+          name: '实际收款',
+          type: 'column',
+          data: [14, 20, 25, 15, 65, 48, 58, 46]
+        },
+        {
+          name: '计划收款',
+          type: 'column',
+          data: [11, 30, 31, 40, 41, 49, 65, 85]
+        },
+        {
+          name: '实际付款',
+          type: 'line',
+          data: [20, 29, 37, 36, 44, 45, 50, 58]
+        },
+        {
+          name: '计划付款',
+          type: 'line',
+          data: [44, 45, 50, 58, 20, 29, 50, 58]
+        }
+      ],
+      chart: {
+        height: 400,
+        type: 'line',
+        stacked: false
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        width: [1, 1, 4, 4]
+      },
+      // title: {
+      //   text: 'XYZ - Stock Analysis (2009 - 2016)',
+      //   align: 'left',
+      //   offsetX: 110
+      // },
+      xaxis: {
+        categories: ['2023年1月', '2023年2月', '2023年3月', '2023年4月', '2023年5月', '2023年6月', '2023年7月', '2023年8月'],
+      },
+      yaxis: [
+        {
+          axisTicks: {
+            show: true,
+          },
+          axisBorder: {
+            show: true,
+            color: '#546e7a'
+          },
+          labels: {
+            style: {
+              colors: '#546e7a',
+            }
+          },
+          title: {
+            text: "金额（万元）",
+            style: {
+              color: '#546e7a',
+            }
+          },
+          tooltip: {
+            enabled: true
+          }
+        },
+        // {
+        //   seriesName: 'Income',
+        //   opposite: true,
+        //   axisTicks: {
+        //     show: true,
+        //   },
+        //   axisBorder: {
+        //     show: true,
+        //     color: '#00E396'
+        //   },
+        //   labels: {
+        //     style: {
+        //       colors: '#00E396',
+        //     }
+        //   },
+        //   title: {
+        //     text: "Operating Cashflow (thousand crores)",
+        //     style: {
+        //       color: '#00E396',
+        //     }
+        //   },
+        // },
+        // {
+        //   seriesName: 'Revenue',
+        //   opposite: true,
+        //   axisTicks: {
+        //     show: true,
+        //   },
+        //   axisBorder: {
+        //     show: true,
+        //     color: '#FEB019'
+        //   },
+        //   labels: {
+        //     style: {
+        //       colors: '#FEB019',
+        //     },
+        //   },
+        //   title: {
+        //     text: "Revenue (thousand crores)",
+        //     style: {
+        //       color: '#FEB019',
+        //     }
+        //   }
+        // },
+      ],
+      tooltip: {
+        fixed: {
+          enabled: true,
+          position: 'topLeft', // topRight, topLeft, bottomRight, bottomLeft
+          offsetY: 30,
+          offsetX: 60
+        },
+      },
+      legend: {
+        horizontalAlign: 'left',
+        offsetX: 40
+      }
+    };
+
+    var chart3 = new ApexCharts(
+      document.querySelector("#apex3"),
+      options3
+    );
+
+    chart3.render();
+
+    var options4 = {
+      series: [{
+        data: [400, 430, 448, 470, 540, 580].reverse()
+      }],
+      chart: {
+        type: 'bar',
+        height: 400
+      },
+      plotOptions: {
+        bar: {
+          distributed: true,
+          horizontal: true,
+          dataLabels: {
+            position: 'bottom'
+          },
+        }
+      },
+      // colors: ['#33b2df', '#546E7A', '#d4526e', '#13d8aa', '#A5978B', '#2b908f', '#f9a3a4', '#90ee7e',
+      //   '#f48024', '#69d2e7'
+      // ],
+      dataLabels: {
+        enabled: true,
+        textAnchor: 'start',
+        style: {
+          colors: ['#fff'],
+          fontSize: '16px',
+          fontFamily: 'PingFangSC, Helvetica, Arial, sans-serif',
+        },
+        formatter: function (val, opt) {
+          return opt.w.globals.labels[opt.dataPointIndex] + ":  " + val + " 万元"
+        },
+        offsetX: 0,
+        dropShadow: {
+          enabled: true
+        }
+      },
+      stroke: {
+        width: 0,
+        colors: ['#fff']
+      },
+      xaxis: {
+        categories: ['绿地控股采购合同', '蒙牛乳业销售合同', '晨光文具办公用品采购合同', '乐事零食采购合同', '水泥销售合同', '太平洋房屋租赁合同'
+        ],
+      },
+      yaxis: {
+        labels: {
+          show: false
+        }
+      },
+      legend: {
+        show: false
+      },
+      // title: {
+      //   text: 'Custom DataLabels',
+      //   align: 'center',
+      //   floating: true
+      // },
+      // subtitle: {
+      //   text: 'Category Names as DataLabels inside bars',
+      //   align: 'center',
+      // },
+      tooltip: {
+        theme: 'dark',
+        x: {
+          show: false
+        },
+        y: {
+          title: {
+            formatter: function () {
+              return ''
+            }
+          }
+        }
+      }
+    };
+
+    var chart4 = new ApexCharts(document.querySelector("#apex4"), options4);
+    chart4.render();
+  </script>
+</body>
+
+</html>
