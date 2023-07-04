@@ -3,7 +3,7 @@ $(function () {
 
   var gridLineColor = 'rgba(77, 138, 240, .1)';
 
-  const dashboardChartColor = '#1e9650';
+  const dashboardChartColor = '#305adf';
 
   var colors = {
     primary: '#727cf5',
