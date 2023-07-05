@@ -328,7 +328,6 @@
   transform: translate(-50%, -50%) translateY(-40px);
 }
 .contract-portal-customList-content {
-  height: 800px;
   width: calc(132%);
   margin-left: -16px;
   padding: 0 16px;
